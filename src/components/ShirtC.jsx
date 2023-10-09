@@ -6,8 +6,7 @@ import {
     Typography
   } from "@material-tailwind/react";
   import Button2 from "./Button2";
-    import Cart from "../assets/icons/cart.svg";
-import { propTypesInvisible } from "@material-tailwind/react/types/components/badge";
+    import Cart from "../assets/icons";
    
   export function ShirtC({image,title,info,price}) {
     return (
