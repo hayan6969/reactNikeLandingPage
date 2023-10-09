@@ -6,8 +6,8 @@ import {
     Typography
   } from "@material-tailwind/react";
   import Button1 from "./Button1";
-    import Cart from "../assets/icons/cart.svg";
-import { propTypesInvisible } from "@material-tailwind/react/types/components/badge";
+  import {Cart} from '../assets/icons';
+  import { propTypesInvisible } from "@material-tailwind/react/types/components/badge";
    
   export function ShoeC({image,title,info,price}) {
     return (

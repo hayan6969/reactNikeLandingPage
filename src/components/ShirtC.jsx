@@ -6,7 +6,7 @@ import {
     Typography
   } from "@material-tailwind/react";
   import Button2 from "./Button2";
-    import Cart from "../assets/icons";
+  import {Cart} from '../assets/icons';
    
   export function ShirtC({image,title,info,price}) {
     return (
