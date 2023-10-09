@@ -10,7 +10,7 @@ import shieldTick from './shield-tick.svg'
 import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
-import Cart from './cart.svg'
+import Cart from './Cart.svg'
 
 export {
     arrowRight,
