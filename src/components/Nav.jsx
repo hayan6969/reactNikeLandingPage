@@ -2,7 +2,7 @@ import React from 'react';
 import { headerLogo } from '../assets/images';
 import { navLinks } from '../constants';
 import Example from './Menu';
-import Cart from '../assets/icons/cart.svg';
+import {Cart} from '../assets/icons';
 import { useCart } from '../../contexts/CartContext';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -12,21 +12,16 @@ function Nav() {
   return (
     <header className='padding-x py-8 absolute max-lg:bg-white: z-20 w-full  '>
       <nav className='flex justify-between items-center max-container padding-l padding-r '>
-        <NavLink to="/">
+        <NavLink to="/reactNikeLandingPage">
           <img src={headerLogo} width={130} height={29} alt="" />
         </NavLink>
 
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
-        <NavLink to="/reactNikeLandingPage" activeClassName="text-coral-red" className='font-montserrat leading-normal hover:text-coral-red text-lg text-slate-gray'>Home</NavLink>
+        <NavLink to="/reactNikeLandingPage"  className='font-montserrat leading-normal hover:text-coral-red text-lg text-slate-gray'>Home</NavLink>
 
-          {/* {navLinks.map((item, index) => (
-            <li key={index}>
-              <Link to={item.href} activeClassName="text-coral-red" className='font-montserrat leading-normal hover:text-coral-red text-lg text-slate-gray'>{item.label}</Link>
-            </li>
-          ))} */}
-          {/* Modify the "Shop" link to use NavLink */}
+        
           <li>
-            <NavLink to="reactNikeLandingPage/shop" activeClassName="text-coral-red" className='font-montserrat leading-normal hover:text-coral-red text-lg text-slate-gray'>Shop</NavLink>
+            <NavLink to="reactNikeLandingPage/shop"  className='font-montserrat leading-normal hover:text-coral-red text-lg text-slate-gray'>Shop</NavLink>
           </li>
         </ul>
         <NavLink to="reactNikeLandingPage/cart">
