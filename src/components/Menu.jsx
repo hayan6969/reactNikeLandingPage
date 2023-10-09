@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { NavLink } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -31,54 +32,58 @@ export default function Example() {
           <div className="py-1 z-20">
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#home"
+               <NavLink
+               to="/reactNikeLandingPage"
+                 
+                 className={classNames(
+                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                   'block px-4 py-2 text-sm hover:text-coral-red'
+                 )}
+               >
+                 Home
+               </NavLink>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink
+                to="reactNikeLandingPage/shop"
+                  
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm hover:text-coral-red'
                   )}
                 >
-                  Home
-                </a>
+                  Shop
+                </NavLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#about-us"
+                <NavLink
+                to="reactNikeLandingPage/shop/reactNikeLandingPage/Shoes"
+                  
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm hover:text-coral-red'
                   )}
                 >
-                  About Us
-                </a>
+                  Shoes
+                </NavLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#products"
+                <NavLink
+                to="reactNikeLandingPage/shop/reactNikeLandingPage/Shirts"
+                  
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm hover:text-coral-red '
+                    'block px-4 py-2 text-sm hover:text-coral-red'
                   )}
                 >
-                  Products
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#contact-us"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm hover:text-coral-red '
-                  )}
-                >
-                  Contact Us
-                </a>
+                  Shirts
+                </NavLink>
               )}
             
               </Menu.Item>
