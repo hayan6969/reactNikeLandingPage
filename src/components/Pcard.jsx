@@ -5,7 +5,7 @@ import {
     CardFooter,
     Typography
   } from "@material-tailwind/react";
-  import Button from "./Button";
+  import Button3 from "./Button3";
     import { arrowRight } from "../assets/icons";
    
   export function EcommerceCard({image,title,info}) {
@@ -43,7 +43,7 @@ import {
           >
             Shop Now
           </Button> */}
-          <Button label='Shop now' iconURL={arrowRight} />
+          <Button3 label='Shop now' iconURL={arrowRight} />
         </CardFooter>
       </Card>
       </a>

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-const Button = ({
+const Button3 = ({
   label,
   iconURL,
   backgroundColor,
@@ -16,7 +16,6 @@ const Button = ({
           : "bg-coral-red text-white border-coral-red"
       } rounded-full ${fullWidth && "w-full"}`}
     >
-      <NavLink to="reactNikeLandingPage/shop" className='flex'>
       {label}
 
 {iconURL && (
@@ -26,9 +25,8 @@ const Button = ({
     className='ml-2 rounded-full bg-white w-5 h-5'
   />
 )}
-      </NavLink>
     </button>
   );
 };
 
-export default Button;
+export default Button3;
