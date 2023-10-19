@@ -7,10 +7,15 @@ export const CartContext = createContext({
             price:"$170",
             image:'',
             id:1,
-        }
-
+        },
+        
         
     ],
+    removequantity:(name)=>{}
+    ,
+
+    itemquanitity:0,
+
     addToCart:(image,name,price,id)=>{
 
     },

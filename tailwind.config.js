@@ -21,6 +21,9 @@ export default {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      duration: {
+        '400': '350ms', // Add custom duration value
+      },
       colors: {
         'primary': "#ECEEFF",
         "coral-red": "#FF6452",

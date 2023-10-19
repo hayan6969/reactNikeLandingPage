@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../../contexts/CartContext";
+import '../assets/button.css'
 const Button = ({
     label,
     iconURL,
@@ -15,20 +16,21 @@ const Button = ({
     const addingToCart = (e) => {
       e.preventDefault();
       addToCart(image,name,price);
-      console.log(itemsArray);
-      console.log(name);
+      
 
     }
+
     return (
       
 <button  onClick={(e)=>{addingToCart(e)}}
-        className={`flex max-xl:mb-3  justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
+        className={`flex max-xl:mb-3 active:scale-x-125 active:bg-red-600 active:border-2 duration-400 transform transition  justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg  leading-none
         ${
           backgroundColor
             ? `${backgroundColor} ${textColor} ${borderColor}`
             : "bg-coral-red text-white border-coral-red"
         } rounded-full ${fullWidth && "w-full"}`}
       >
+        
         {label}
   
         {iconURL && (

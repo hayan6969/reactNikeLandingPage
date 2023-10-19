@@ -3,15 +3,16 @@ import { useCart } from '../../contexts/CartContext'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
+
 function CartComponent() {
-    const { itemsArray,removeFromCart } = useCart()
+    const { itemsArray,removeFromCart,addToCart , removequantity,itemquanitity} = useCart()
     const tax=4.99;
     const [total,setTotal] = useState(0)
     useEffect(() => {
         // Calculate the total price when itemsArray changes
-        const totalPrice = itemsArray.reduce((acc, item) => acc + parseFloat(item.price), 0);
+        const totalPrice = itemsArray.reduce((acc, item) => acc + (parseFloat(item.price) * parseInt(item.number)), 0);
         setTotal(totalPrice);
-      }, [itemsArray]);
+      }, [itemsArray,itemquanitity]);
     const handleRemoveFromCart = (itemId) => {
         // Create a copy of the current itemsArray without the item to be removed
         const updatedItemsArray = itemsArray.filter((item) => item.id !== itemId);
@@ -43,9 +44,9 @@ function CartComponent() {
                   </div>
                   <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                     <div className="flex items-center border-gray-100">
-                      <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
-                      <input className="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
-                      <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                      <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50" onClick={()=>{removequantity(item.name)}}> - </span>
+                      <input className="h-8 w-8 border bg-white text-center text-xs outline-none disabled font-montserrat" type="number" value={item.number}  />
+                      <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50" onClick={()=>{addToCart(item.image,item.name,item.price)}}> + </span>
                     </div>
                     <div className="flex items-center space-x-4">
                       <p className="text-xl font-montserrat font-bold">{item.price}</p>
