@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useCart } from "../../contexts/CartContext";
-import '../assets/button.css'
 const Button = ({
     label,
     iconURL,
