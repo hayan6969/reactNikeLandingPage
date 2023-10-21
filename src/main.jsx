@@ -9,6 +9,8 @@ import Products from './components/Products.jsx'
 import Shoes from './components/Shoes.jsx'
 import Shirts from './components/Shirts.jsx'
 import CartComponent from './components/CartComponent.jsx'
+import { SearchC } from './components/SearchC.jsx'
+import SearchPage from './components/SearchPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
       element: <Products/>, // Render the Products component for the "/Shop" path
     },
     {
+      path:'reactNikeLandingPage/search',
+      element:<SearchPage/>
+    },
+
+    {
       path:"reactNikeLandingPage/shop/reactNikeLandingPage/Shoes",
       element:<Shoes/>
     },
@@ -33,7 +40,8 @@ const router = createBrowserRouter([
     {
       path:"reactNikeLandingPage/cart",
       element:<CartComponent/>
-    }
+    },
+    
     ]
   }
 ])

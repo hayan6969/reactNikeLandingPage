@@ -19,9 +19,15 @@ import Home from "./components/Home";
 import { Outlet } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import SearchPage from "./components/SearchPage";
+import { allproducts } from "./constants/Products";
 
 function App() {
   const [itemsArray, setItemsArray] = useState([]);
+  const [searchItem,setSearchItems]=useState(allproducts);
+  const setSearchItem=(name)=>{
+setSearchItems(allproducts.filter((item)=>item.name.toLowerCase().includes(name.toLowerCase())));
+  }
   const [itemquanitity,setItemQuantity]=useState(0);
   const addToCart = (image,name,price) => {
     let exists=false;
@@ -104,11 +110,11 @@ itemsArray.forEach((item)=>{
 
   }, [itemsArray])
   return (
-    <CartProvider1 value={{itemsArray,addToCart,removeFromCart,itemquanitity,removequantity}}>
+    <CartProvider1 value={{itemsArray,addToCart,removeFromCart,itemquanitity,removequantity,searchItem,setSearchItem}}>
       <ScrollToTop/>
     <main className="relative">
       <Nav/>
-      <Outlet/>
+     <Outlet/>
       
       <section className="padding bg-black padding-x padding-t pb-8 mt-20 max-md:mt-[700px]">
         <Footer />

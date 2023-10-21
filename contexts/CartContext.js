@@ -15,6 +15,17 @@ export const CartContext = createContext({
     ,
 
     itemquanitity:0,
+    searchItem:[{
+        name:"Nike Air Max 270",
+        price:"$170",
+        image:'',
+        id:1,
+    
+    }]
+    ,
+    setSearchItem:(name)=>{
+     
+    },
 
     addToCart:(image,name,price,id)=>{
 

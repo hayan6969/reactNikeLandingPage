@@ -11,7 +11,7 @@ import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 import Cart from './Cart.svg'
-
+import search from './search.svg'
 export {
     arrowRight,
     cheveronRight,
@@ -23,6 +23,7 @@ export {
     support,
     shieldTick,
     Cart,
+    search,
     star,
     truckFast,
     twitter

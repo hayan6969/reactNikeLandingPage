@@ -23,31 +23,82 @@ export const shirts =[
 
 export const shoesN =[ 
     {
-        id: 1,
+        id: 4,
         name: 'Nike Shoe 1',
         price: "100 $",
         image: p1,
     },
     {
-        id: 2,
+        id: 5,
         name: 'Nike Shoe 2',
         price: '125 $',
         image: p2,
     },
     {
-        id: 3,
+        id: 6,
         name: 'Nike Shoe 3',
         price: '110 $',
         image: p3,
     },
     {
-        id: 4,
+        id: 7,
         name: 'Nike Shoe 4',
         price: '150 $',
         image: p4,
     },
     {
+        id: 8,
+        name: 'Nike Shoe 5',
+        price: '135 $',
+        image: p5,
+    }
+ ]
+
+ export const allproducts = [
+    {
+        id: 1,
+        name: 'Nike Shirt 1',
+        price: '20 $',
+        image: shirt1,
+    },
+    {
+        id: 2,
+        name: 'Nike Shirt 2',
+        price: '30 $',
+        image: shirt2,
+    },
+    {
+        id: 3,
+        name: 'Nike Shirt 3',
+        price: '25 $',
+        image: shirt3,
+    },
+    {
+        id: 4,
+        name: 'Nike Shoe 1',
+        price: "100 $",
+        image: p1,
+    },
+    {
         id: 5,
+        name: 'Nike Shoe 2',
+        price: '125 $',
+        image: p2,
+    },
+    {
+        id: 6,
+        name: 'Nike Shoe 3',
+        price: '110 $',
+        image: p3,
+    },
+    {
+        id: 7,
+        name: 'Nike Shoe 4',
+        price: '150 $',
+        image: p4,
+    },
+    {
+        id: 8,
         name: 'Nike Shoe 5',
         price: '135 $',
         image: p5,
