@@ -73,7 +73,7 @@ function CartComponent() {
             <div className="flex justify-between">
               <p className="text-lg font-bold">Total</p>
               <div>
-                <p className="mb-1 text-lg font-bold">${(total + tax).toFixed(2)} USD</p>
+                <p className="mb-1 text-lg font-bold">${(total===0)?0:((total + tax).toFixed(2))} USD</p>
                 <p className="text-sm text-gray-700">including VAT</p>
               </div>
             </div>
